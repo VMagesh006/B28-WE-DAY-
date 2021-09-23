@@ -31,5 +31,30 @@ if(Object.keys(obj1).length==Object.keys(obj2).length){
     **OUTPUT: True**
     
    ** **2.QUESTION****
+   Use the rest countries API url -> https://restcountries.eu/rest/v2/all and display all the country flags in console
    
+ **ANSWER:**
+ 
+ var  request= new XMLHttpRequest();
+ request.open('GET','https://restcountries.eu/rest/v2/all',true);
+ request.send();
+ request.onload=function(){
+ var data=JSON.parse(request.response);
+    console.log(data);
+ 
+**** 3.QUESTION:**  
+
+Use the same rest countries and print all countries name, region, sub region and population
+
+**ANSWER**:
+
+var  request= new XMLHttpRequest();
+request.open('GET','https://restcountries.eu/rest/v2/all',true);
+request.send();
+request.onload=function(){
+var data=JSON.parse(request.response);
+for(i=0;i<data.length;i++){
+    console.log("name: "+data[i].name+" & "+"region: "+data[i].region+" & "+"sub_region: "+data[i].sub_region+" & "+" Popultion: "+data[i].popultion);
+    //console.log(data[i].capital);
+}
    
