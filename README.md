@@ -55,6 +55,5 @@ request.onload=function(){
 var data=JSON.parse(request.response);
 for(i=0;i<data.length;i++){
     console.log("name: "+data[i].name+" & "+"region: "+data[i].region+" & "+"sub_region: "+data[i].sub_region+" & "+" Popultion: "+data[i].popultion);
-    //console.log(data[i].capital);
 }
    
