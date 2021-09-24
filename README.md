@@ -40,7 +40,10 @@ if(Object.keys(obj1).length==Object.keys(obj2).length){
  request.send();
  request.onload=function(){
  var data=JSON.parse(request.response);
-    console.log(data);
+ for(i=0;i<data.length;i++){
+    console.log(data[i].flags);
+    }
+    }
  
 **** 3.QUESTION:**  
 
@@ -55,5 +58,6 @@ request.onload=function(){
 var data=JSON.parse(request.response);
 for(i=0;i<data.length;i++){
     console.log("name: "+data[i].name+" & "+"region: "+data[i].region+" & "+"sub_region: "+data[i].sub_region+" & "+" Popultion: "+data[i].popultion);
+}
 }
    
